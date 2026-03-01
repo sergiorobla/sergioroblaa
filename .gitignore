@@ -1,0 +1,17 @@
+# Frontend
+apps/web/.env
+apps/web/node_modules/
+apps/web/dist/
+
+# Backend
+apps/api/target/
+apps/api/.classpath
+apps/api/.project
+apps/api/.settings/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

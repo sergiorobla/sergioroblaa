@@ -1,0 +1,39 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: sergiorobla_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sergiorobla_db
+      MYSQL_USER: sergio
+      MYSQL_PASSWORD: Ilerna2026.
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  backsergiorobla:
+    build: ./apps/api
+    container_name: backsergiorobla
+    restart: always
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DB_USER: sergio
+      DB_PASSWORD: Ilerna2026.
+
+  websergiorobla:
+    build: ./apps/web
+    container_name: websergiorobla
+    restart: always
+    depends_on:
+      - backsergiorobla
+    ports:
+      - "3000:80"
+
+volumes:
+  mysql_data:
