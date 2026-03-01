@@ -15,3 +15,5 @@ apps/api/.settings/
 # OS
 .DS_Store
 Thumbs.db
+
+.env

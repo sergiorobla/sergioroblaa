@@ -1,13 +1,13 @@
 services:
   mysql:
-    image: mysql:8
+    image: mysql:8.0
     container_name: sergiorobla_mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: sergiorobla_db
-      MYSQL_USER: sergio
-      MYSQL_PASSWORD: Ilerna2026.
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     ports:
       - "3306:3306"
     volumes:
@@ -23,8 +23,8 @@ services:
       - "8080:8080"
     environment:
       SPRING_PROFILES_ACTIVE: prod
-      DB_USER: sergio
-      DB_PASSWORD: Ilerna2026.
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
 
   websergiorobla:
     build: ./apps/web
