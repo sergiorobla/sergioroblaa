@@ -1,0 +1,17 @@
+.btn-app.claro {
+  background-color: #1f2937;
+  color: white;
+}
+
+.btn-app.claro:hover {
+  background-color: #39414d;
+}
+
+.btn-app.oscuro {
+  background-color: #ff8c00;
+  color: #000000;
+}
+
+.btn-app.oscuro:hover {
+  background-color: #ffa22f;
+}
