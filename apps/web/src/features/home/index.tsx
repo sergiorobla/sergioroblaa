@@ -1,13 +1,11 @@
-import Columnas from "./components/Columnas";
-import Contact from "./components/Contact";
-import Decisions from "./components/Decisions";
+import GaleriaFotos from "../../components/ui/Galery/GaleriaFotos";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
-    return (
-        <>
-        <Decisions />
-        <Columnas />
-        <Contact />
-        </>
-    )
+  return (
+    <div className="flex flex-col justify-center">
+      <Navbar />
+      <GaleriaFotos />
+    </div>
+  );
 }

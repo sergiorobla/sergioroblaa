@@ -1,6 +1,7 @@
 import type { TextAreaProps } from "../../../types/TextAreaProps";
 export default function TextArea({
   name,
+  className,
   placeholder,
   required,
 }: TextAreaProps) {
@@ -8,7 +9,7 @@ export default function TextArea({
     <>
       <textarea
         name={name}
-        className={`bg-white p-2 rounded-lg tracking-wide`}
+        className={className}
         placeholder={placeholder}
         required={required}
       />

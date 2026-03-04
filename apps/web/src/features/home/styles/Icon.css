@@ -1,0 +1,51 @@
+/* En tu archivo CSS global o componente */
+
+.icon {
+  background-image: linear-gradient(to right, #6366f1, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition:
+    background-image 0.6s ease,
+    transform 0.4s ease;
+}
+
+.icon:hover {
+  background-image: linear-gradient(
+    to right,
+    #ec4899,
+    #a855f7,
+    #6366f1
+  ); /* reverse al hover */
+  transform: scale(1.02) translateX(1px); /* efecto sutil */
+}
+
+/* Tema claro (por defecto o .claro) */
+.icon.claro,
+.icon:not(.oscuro) {
+  background-image: linear-gradient(to right, #633535, #542485, #99406c);
+}
+
+.icon.claro:hover,
+.icon:not(.oscuro):hover {
+  background-image: linear-gradient(to right, #99406c, #542485, #633535);
+}
+
+/* Tema oscuro */
+.icon.oscuro {
+  background-image: linear-gradient(
+    to right,
+    #a5b4fc,
+    #c084fc,
+    #f9a8d4
+  ); /* tonos más claros y suaves en dark */
+}
+
+.icon.oscuro:hover {
+  background-image: linear-gradient(
+    to right,
+    #f9a8d4,
+    #c084fc,
+    #a5b4fc
+  ); /* reverse */
+}

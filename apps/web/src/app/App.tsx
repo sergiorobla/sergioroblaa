@@ -1,20 +1,12 @@
-import { useTheme } from "../Contexts/ThemeContext";
+import Footer from "../features/footer/Footer";
 import Home from "../features/home/index";
-import AnimatedBackground from "../features/home/components/AnimatedBackground";
 
 function App() {
-  const { theme } = useTheme();
-
   return (
-    <>
-      <div className={`w-full m-h-[100vh] ${theme} min-h-screen relative`}>
-        {/* Fondo de cielo y estrellas */}
-        <AnimatedBackground />
-        <div className="relative z-10 flex flex-col items-center gap-8 py-12 px-4">
-          <Home />
-        </div>
-      </div>
-    </>
+    <div className="relative z-10 py-5 px-4">
+      <Home />
+      <Footer />
+    </div>
   );
 }
 

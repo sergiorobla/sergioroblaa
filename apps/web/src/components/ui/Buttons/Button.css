@@ -1,0 +1,53 @@
+/* Estilos botón */
+.btn-app.claro {
+  background-color: #1f2937;
+  color: white;
+}
+.btn-app.claro:hover {
+  background-color: #39414d;
+}
+
+.btn-app.oscuro {
+  background-color: #ff8c00;
+  color: #000000;
+}
+.btn-app.oscuro:hover {
+  background-color: #ffa22f;
+}
+
+/* Estilo menu botón */
+.menu-list.claro {
+  background-color: #1f2937;
+  color: white;
+}
+.menu-list.claro li:hover {
+  background-color: #39414d;
+}
+
+.menu-list.oscuro {
+  background-color: #ff8c00;
+  color: black;
+}
+.menu-list.oscuro li:hover {
+  background-color: #ffa22f;
+}
+
+.menu-list {
+  border-radius: 8px;
+}
+
+.menu-list li {
+  padding: 20px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.menu-list li:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.menu-list li:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

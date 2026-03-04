@@ -7,16 +7,17 @@ export default function Button({
   className,
   onClick,
   text,
+  children,
 }: ButtonProps) {
   const { theme } = useTheme();
   return (
     <>
       <button
         type={type}
-        className={`btn-app ${theme} p-2.5 rounded-lg tracking-wide ${className}`}
+        className={`btn-app ${theme} p-2.5 rounded-lg tracking-wide cursor-pointer ${className}`}
         onClick={onClick}
       >
-        {text}
+        {children || text}
       </button>
     </>
   );
